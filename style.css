@@ -1,0 +1,905 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Mulish", sans-serif;
+}
+
+body {
+    background-color: rgba(255, 250, 237, 1);
+    
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: linear-gradient(to right, rgba(255, 250, 237, 1) 50%, #f4c400 50%);
+    height: 50px;
+}
+
+.logo img {
+    height: 40px;
+    padding-left: 25px;
+}
+
+.hamburger , #toggle{
+    display: none;
+}
+
+nav > ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.donate-btn {
+    background-color: #c23d2a;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    margin-right: .5rem;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: rgba(255, 250, 237, 1);
+    padding-left: 77.5px;
+    background: linear-gradient(to right, rgba(255, 250, 237, 1) 96%, #f4c400 80%);
+}
+
+/* Left Text Section */
+.hero-text {
+    flex: 1;
+    z-index: 2;
+}
+
+.hero-text h2 {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.hero-text p {
+    font-size: 12px;
+    color: gray;
+    margin-top: 10px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #c23d2a;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Right Image Section with Yellow Background */
+.hero-image {
+    flex: 1.14;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.hero-image img {
+    width: 100vh;
+    height: 50vh;
+    display: block;
+    object-fit: cover;
+}
+
+
+/* Info Section */
+.info-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    background-color: #08605f;
+    color:rgba(255, 250, 237, 1);
+    height: 38vh;
+}
+
+.info-box {
+    width: 35%;
+}
+
+.info-box h2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 22px;
+    margin-top: -0px;
+    margin-left: -25px;
+}
+
+.info-box > p{
+    margin: 25px;
+    font-weight: 300;
+}
+
+.awana-container {
+    position: relative; /* Ensures absolute elements are positioned relative to this */
+    padding-top: 40px;
+    background: rgba(255, 250, 237, 1);
+}
+
+.top-cards {
+    display: flex;
+    justify-content: center; /* Center the cards */
+    gap: 20px; /* Add spacing */
+    flex-wrap: wrap;
+    margin-top: 40px;
+    position: relative; /* Allows layering */
+}
+
+.card {
+    background: rgba(255, 255, 255, 1);
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 380px;
+    height: 235px;
+    position: relative; /* So that z-index works */
+    z-index: 2; /* Ensures the card stays above the flower */
+}
+
+.card > p{
+    font-size: 14px;
+}
+/* Flower Design */
+.flower-design {
+    position: absolute;
+    right: -120px; /* Slightly outside the last card */
+    bottom: 65px; /* Moves part of it under the last card */
+    width: 250px;
+    height: 250px;
+    background: url('https://cdn-icons-png.freepik.com/256/10942/10942981.png?ga=GA1.1.1844183234.1741438513&semt=ais_hybrid') no-repeat center center;
+    background-size: contain;
+    opacity: 0.2;
+    z-index: 1; /* Ensures it stays behind the card */
+}
+
+/* Circle Container */
+.icon-circle {
+    width: 80px;  
+    height: 80px;
+    background: #f1f1f1; 
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 15px auto; /* Center it */
+}
+
+.icon-circle img {
+    width: 50px;  
+    height: auto;
+}
+
+
+
+/* Recent Activities */
+.section-title {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 20px 0;
+    margin-left: 60px ;
+}
+
+.recent-activity {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    position: relative; /* Allows precise positioning */
+    left: 50px; /* Pushes it slightly to the right */
+}
+
+body {
+    overflow-x: hidden; /* Prevents unwanted horizontal scrolling */
+}
+
+.recent-activities {
+    width: 80%;
+    margin: 30px auto;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 50px;
+    margin-top: 80px;
+    padding-left: 50px;
+}
+
+
+.activities-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 0.6fr; /* The third column is smaller */
+    gap: 30px; /* Space between activities */
+    margin-bottom: 40px; /* Space below the section */
+    width: 220vh;
+    height: 40vh;
+}
+
+.recent-activity {
+    display: flex;
+    flex-direction: row; /* Text on the left, image on the right */
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 1);
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.activity-text {
+    flex: 1; /* Text section takes available space */
+    width: 50%;
+    text-align: left;
+    padding-left: 20px; /* Space between text and image */
+}
+
+.activity-text > h3{
+    position: relative;
+    top: -10px;
+    font-size: 17px;
+}
+
+.activity-text > p{
+    font-size: 14px;
+}
+
+
+.activity-image{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.activity-image img {
+    width: 237px; /* Adjust image width */
+    height: 240px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    object-fit: cover;
+}
+
+
+.read-all {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 8px 16px;
+    color: rgba(150, 188, 187, 1);
+    text-decoration: none;
+    font-weight: bold;
+    background: white; /* Inside should be white */
+    border: 2px solid rgba(150, 188, 187, 1); /* Same color as text */
+    border-radius: 5px; /* Rounded border */
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.read-all:hover {
+    color: black; /* Change text to white */
+}
+
+
+.recent-activities {
+    margin-left: -1px; /* Adjust this value as needed */
+}
+
+/* Upcoming Events Section */
+.upcoming-events {
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 20px;
+    position: relative;
+}
+
+/* Flower Decoration for Upcoming Events & Latest News */
+.flower-left {
+    position: absolute;
+    left: -490px; /* Moves it slightly off-screen for a natural effect */
+    top: -290px; /* Starts at the top of "Upcoming Events" */
+    width: 800px; /* Adjust the size as needed */
+    height: 1500px; /* Extend down to "Latest News" */
+    background-image: url('https://cdn-icons-png.freepik.com/256/7194/7194295.png?ga=GA1.1.1844183234.1741438513&semt=ais_hybrid'); /* Replace with actual flower image path */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -1; /* Puts it behind the content */
+    opacity: 0.2;
+}
+
+
+/* Header: Upcoming Events + View All */
+.events-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.events-header h2 {
+    font-size: 26px;
+    font-weight: bold;
+    margin-left: -90px;
+    margin-bottom: 90px;
+}
+
+.view-allss {
+    text-decoration: none;
+    color: #4a4a4a;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Grid Container */
+.events-container {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr; /* Left side smaller than right */
+    gap: 32px;
+    margin-top: 20px;
+}
+
+/* Left Grid (Event Cards) */
+.events-left {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Left Grid Background */
+.events-left-container {
+    background-color: #ffffff; /* Light blue background */
+    padding: 5px;
+    border-radius: 5px;
+    margin-left: -50px;
+    height: 40vh;
+}
+
+
+/* Event Card */
+.event-card {
+    display: flex;
+    align-items: center;
+    background-color: #08605f;
+    padding: 15px;
+    border-radius: 5px;
+    color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.event-card.faded {
+    background-color:#ffffff;
+    color: black;
+    border-radius: 5px;
+}
+
+/* Event Icon */
+.event-icon img {
+    width: 30px;
+    margin-right: 10px;
+    background-color: #ffffff;  
+    border-radius: 8px; 
+}
+
+/* Event Info */
+.event-info .event-date {
+    font-size: 12px;
+}
+
+.event-info .event-title {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Right Grid (Event Details) */
+.events-right {
+    padding: 10px;
+    /* width: 40rem; */
+}
+
+.events-right h3 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.events-right p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.events-right > a{
+    display: inline-block;
+    margin-top: 12px;
+    padding: 8px 16px;
+    color: rgba(150, 188, 187, 1);
+    text-decoration: none;
+    font-weight: bold;
+    background-color: rgba(255, 250, 237, 1);
+    border: 2px solid rgba(150, 188, 187, 1); /* Same color as text */
+    border-radius: 5px; /* Rounded border */
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+}
+
+/* Latest News Section */
+.latest-news {
+    width: 90%;
+    max-width: 1100px;
+    margin: 50px auto;
+}
+
+/* Header - Title & View All Button */
+.news-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-left: -50px;
+}
+
+.news-header h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 80px;
+}
+
+.view-allS {
+    font-size: 14px;
+    color: #4a4a4a;
+    text-decoration: none;
+}
+
+/* News Cards Layout */
+.news-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+
+/* Individual News Card */
+.news-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+    width: 48vh;
+    height: 40vh;
+    margin-left: -15px;
+}
+
+.news-card img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+}
+
+.news-card h3 {
+    font-size: 16px;
+    margin: 15px;
+}
+
+/* News Meta (Date & Author) */
+.news-meta {
+    font-size: 12px;
+    color: #777;
+    margin: 0 15px 15px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.news-meta i {
+    color: #4a4a4a;
+    margin-right: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .news-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .news-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* Full Section Container */
+.hear-kids-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color:  rgba(255, 250, 237, 1);
+    position: relative;
+}
+
+.flower-top-right {
+    position: absolute;
+    top: -50px;  /* Move slightly outside the top */
+    right: -50px; /* Move slightly outside the right */
+    width: 120px; /* Adjust size as needed */
+    height: auto;
+    opacity: 0.3; /* Make it blend slightly */
+}
+
+.flower-bottom-left {
+    position: absolute;
+    bottom: -50px;  /* Move slightly outside the bottom */
+    left: -50px;  /* Move slightly outside the left */
+    width: 120px;
+    height: auto;
+    opacity: 0.3;
+}
+
+/* Header Section */
+.header {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    max-width: 900px;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.header h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-left: -145px;
+    margin-bottom: 380px;
+}
+
+.view-alls {
+    text-decoration: none;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 300px;
+    margin-right: -50px;
+}
+
+/* Stacked Cards */
+.stack-container {
+    position: relative;
+    width: 600px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -380px;
+}
+
+/* Stacking Effect */
+.stack-card {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Background Stacks */
+.stack-1 {
+    top: -7px;
+    right: -10px;
+    opacity: 0.5;
+    z-index: 1;
+}
+
+.stack-2 {
+    top: -6px;
+    right: -5px;
+    /* opacity: 0.7; */
+    z-index: 2;
+}
+
+/* Main Card */
+.main-card {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    z-index: 3;
+}
+
+/* Content Layout */
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+/* Text Section */
+.text-section {
+    width: 55%;
+    font-size: 14px;
+    color: #333;
+}
+
+.author {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Image Section */
+.image-section {
+    width: 40%;
+    position: relative;
+}
+
+.image-section img {
+    width: 100%;
+    border-radius: 7px;
+}
+
+/* Play Button */
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: yellow;
+    color: black;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Navigation Arrows */
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+}
+
+.left-arrow {
+    left: 10%;
+}
+
+.right-arrow {
+    right: 10%;
+}
+
+/* ✅ Top Section (Separate Background) */
+.top-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(rgba(18, 103, 102, 0.9), rgba(18, 103, 102, 0.9)), 
+    url('https://t4.ftcdn.net/jpg/02/74/05/73/360_F_274057346_5jH0Z26503vKoIOIetwuX7FxKHJR6B71.webp'); /* Black overlay on image */
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+padding: 40px 50px;
+    background-color:  #08605f; 
+    color: white;
+    padding: 20px 50px;
+    height: 25vh;
+}
+
+.top-section h2 {
+    font-size: 24px;
+    color: #ffffff;
+    margin-bottom: 100px;
+}
+
+.donate-btns {
+    background-color: #FFD700; 
+    color: black;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.footer {
+    background: linear-gradient(rgba(54, 53, 55, 0.9), rgba(54, 53, 55, 0.9)), 
+                url('data:image/jpeg;base64,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'); /* Black overlay on image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 40px 50px 10px;
+    color: white;
+}
+
+
+/* ✅ Footer Grid Layout */
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+    gap: 30px;
+}
+
+/* Footer Column Styling */
+.footer-column h3 {
+    font-size: 18px;
+    color: #ffffff; 
+    margin-bottom: 10px;
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column ul li {
+    margin-bottom: 8px;
+    color: #ccc; /* Light gray text */
+}
+
+.footer-column p {
+    color: #ccc;
+    padding: .4rem;
+}
+
+/* ✅ Copyright Section */
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 14px;
+    color: #bbb;
+    margin-top: 20px;
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-content {
+        grid-template-columns: 1fr; /* 1 column for mobile */
+        text-align: center;
+    }
+}
+
+@media(min-width: 260px) and (max-width: 420px){
+    .hamburger{
+        display: block;
+        font-size: 1.3rem;
+        margin-left: auto;
+    }
+    .logo > Img{
+        margin-left: 0;
+    }
+    nav ul{
+        display: none;
+        position: absolute;
+        width: 340px;
+        padding: 1.8rem;
+        top: 4.4rem;
+        right: 3px;
+        z-index: 1;
+        background-color: #f4c400;
+        opacity: 0.97;
+        border-bottom: 4px solid#fff;
+        transform: translate(100%, 0);
+        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+    }
+    #toggle:checked + nav > ul{
+        display: block;
+        transform: none;
+    }
+    nav > ul > li > a{
+        width: 100%;
+        color: #000;
+        font-size: 18px;
+        padding: 0.6rem;
+        text-align: left;
+        border-bottom: 4px solid #fff;
+    }
+    nav > ul > li{
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        border-left: none;
+    }
+    .hero{
+        z-index: -1;
+    }
+    .info-section{
+        height: 40vh;
+        padding: 1rem;
+    }
+    .info-box{
+        width: 36%;
+        justify-content: center;
+        align-items: center;
+        display: grid;
+    }
+    .info-box > h2{
+        font-size: 17px;
+        margin-bottom: 8px;
+    }
+    .info-box > p{
+        font-size: 12px;
+        margin: 8px;
+    }
+    
+    .recent-activity{
+        width: 60%;
+        margin-left: 0%;
+        overflow: hidden;
+    }
+    .activity-text > h3{
+        font-size: 15px;
+    }
+    .activity-text > p{
+        font-size: 12px;
+        width: 140px;
+    }
+    .activity-image{
+        width: 50%;
+    }
+    .events-header{
+        /* justify-content: space-between; */
+        gap: 5rem;
+    }
+    .events-header > h2{
+        font-size: 20px;
+        /* margin-left: 1px; */
+    }
+    .events-header > a{
+        /* margin-left: auto; */
+        margin-right: .1px;
+    }
+    .events-left-container{
+        margin: 2px;
+    }
+    .header > h2{
+        margin-left: .2px;
+    }
+    .stack-container{
+        max-width: 20rem;
+    }
+    .top-section{
+        gap: 6rem;
+    }
+    .top-section > h2{
+        font-size: 20px;
+    }
+}
