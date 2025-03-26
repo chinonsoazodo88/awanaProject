@@ -32,10 +32,23 @@ header {
     display: none;
 }
 
+nav{
+    /* position: fixed; */
+    /* border:  2px solid red; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to right, rgba(255, 250, 237, 1) 50%, #f4c400 50%);
+    width: 93.7%;
+    position: fixed;
+    z-index: 10000;
+}
+
 nav > ul {
     list-style: none;
     display: flex;
     gap: 20px;
+    margin-right: 5rem;
 }
 
 nav ul li {
@@ -53,7 +66,7 @@ nav ul li a {
     color: white;
     padding: 8px 15px;
     border-radius: 5px;
-    margin-right: .5rem;
+    margin-right: -4.5rem;
 }
 
 /* Hero Section */
@@ -222,7 +235,7 @@ body {
 }
 
 .recent-activities {
-    width: 80%;
+    /* width: 80%; */
     margin: 30px auto;
 }
 
@@ -233,6 +246,14 @@ h2 {
     margin-bottom: 50px;
     margin-top: 80px;
     padding-left: 50px;
+}
+
+.scroll-wrapper{
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    scrollbar-width: thin;
+    scrollbar-color: #fff;
 }
 
 
@@ -343,6 +364,7 @@ h2 {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: auto -1rem;
 }
 
 .events-header h2 {
@@ -357,6 +379,7 @@ h2 {
     color: #4a4a4a;
     font-size: 14px;
     font-weight: 500;
+    margin-right: -2rem;
 }
 
 /* Grid Container */
@@ -463,7 +486,7 @@ h2 {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
-    margin-left: -50px;
+    margin-left: -4.5rem;
 }
 
 .news-header h2 {
@@ -476,6 +499,7 @@ h2 {
     font-size: 14px;
     color: #4a4a4a;
     text-decoration: none;
+    margin-right: -1.5rem;
 }
 
 /* News Cards Layout */
@@ -550,8 +574,8 @@ h2 {
 
 .flower-top-right {
     position: absolute;
-    top: -50px;  /* Move slightly outside the top */
-    right: -50px; /* Move slightly outside the right */
+    top: -65px;  /* Move slightly outside the top */
+    right: -40px; /* Move slightly outside the right */
     width: 120px; /* Adjust size as needed */
     height: auto;
     opacity: 0.3; /* Make it blend slightly */
@@ -570,8 +594,9 @@ h2 {
 .header {
     display: flex;
     justify-content: space-between;
-    width: 80%;
-    max-width: 900px;
+    width: 100%;
+    max-width: 100%;
+    /* margin: auto; */
     align-items: center;
     margin-bottom: 40px;
 }
@@ -579,7 +604,7 @@ h2 {
 .header h2 {
     font-size: 24px;
     font-weight: 700;
-    margin-left: -145px;
+    margin-left: 1rem;
     margin-bottom: 380px;
 }
 
@@ -588,7 +613,7 @@ h2 {
     font-size: 14px;
     color: #333;
     margin-bottom: 300px;
-    margin-right: -50px;
+    margin-right: 3rem;
 }
 
 /* Stacked Cards */
@@ -724,6 +749,7 @@ padding: 40px 50px;
     font-size: 24px;
     color: #ffffff;
     margin-bottom: 100px;
+    margin-left: -2.8rem;
 }
 
 .donate-btns {
@@ -776,9 +802,14 @@ padding: 40px 50px;
 
 /* ✅ Copyright Section */
 .footer-bottom {
-    text-align: center;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* text-align: center; */
     padding-top: 20px;
     font-size: 14px;
+    background-color: #222;
     color: #bbb;
     margin-top: 20px;
 }
@@ -801,7 +832,13 @@ padding: 40px 50px;
     .hamburger{
         display: block;
         font-size: 1.3rem;
-        margin-left: auto;
+    }
+    nav{
+        background: rgba(255, 250, 237, 1);
+        justify-content: space-around;
+    }
+    header{
+        background: rgba(255, 250, 237, 1);
     }
     .logo > Img{
         margin-left: 0;
@@ -809,12 +846,12 @@ padding: 40px 50px;
     nav ul{
         display: none;
         position: absolute;
-        width: 340px;
+        width: 330px;
         padding: 1.8rem;
-        top: 4.4rem;
-        right: 3px;
+        top: 2.6rem;
+        left: 5px;
         z-index: 1;
-        background-color: #f4c400;
+        background-color: rgba(255, 250, 237, 1);
         opacity: 0.97;
         border-bottom: 4px solid#fff;
         transform: translate(100%, 0);
@@ -823,6 +860,7 @@ padding: 40px 50px;
     #toggle:checked + nav > ul{
         display: block;
         transform: none;
+        justify-content: center;
     }
     nav > ul > li > a{
         width: 100%;
