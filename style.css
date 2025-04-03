@@ -921,7 +921,7 @@ padding: 40px 50px;
     .events-header{
         justify-content: center;
         /* justify-content: space-between; */
-        gap: 5rem;
+        gap: 5.9rem;
     }
     .events-header > h2{
         font-size: 20px;
